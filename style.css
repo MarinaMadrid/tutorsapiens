@@ -245,10 +245,10 @@ footer a:hover {
     justify-content: start;
     align-items: stretch;
   }
-  .menu {
+  .header__menu {
     margin-top: 1em;
   }
-  .menu a {
+  .header__menu a {
     display: block;
     margin-bottom: 1em;
   }
