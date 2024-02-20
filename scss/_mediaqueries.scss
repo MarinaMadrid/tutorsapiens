@@ -1,0 +1,37 @@
+/* Media query para pantallas más pequeñas */
+@media only screen and (max-width: 600px) {
+    header {
+        @include flexbox(column); 
+    }
+
+    .menu {
+        margin-top: 1em; 
+
+        a {
+            display: block; 
+            margin-bottom: 1em; 
+        }
+    }
+
+    .main__title{
+        h2 {
+            font-size: 1em; 
+            white-space: normal;
+        }
+    }
+    
+    .main__galeria,
+    .main__posts,
+    .main__formulario__data {
+        @include flexbox(column);
+    }
+
+    .main__galeria article,
+    .main__posts article {
+        width: 100%;
+    }
+
+    .main__formulario__data input{
+        width: 98.7vh;
+    }
+}

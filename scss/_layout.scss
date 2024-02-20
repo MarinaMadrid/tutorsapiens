@@ -1,0 +1,234 @@
+*,/*todos los elementos*/
+*::before, /*para asegurar que los elementos generados por CSS de forma dinámica también sigan estas reglas*/
+*::after {
+  box-sizing: border-box; /* sin esta regla, el ancho y alto de un elemento se calcula sin tener en cuenta el relleno y el borde*/
+  margin: 0;  /* para garantizar que no haya márgenes o rellenos no deseados aplicados de forma predeterminada por el navegador*/
+  padding: 0;
+}
+
+body, 
+input, 
+textarea {
+    font-family: "Lato", sans-serif;
+    color: map-get($colores, white-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*HEADER*/
+header{
+    @include flexbox(row, space-between, center);
+    padding: 2em;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    padding-left: 5em;
+
+    p{
+        font-family: 'Pacifico', cursive;
+        color: map-get($colores, red-color);
+        font-size: 2em;
+        cursor: pointer;
+
+        &:hover{
+            color: map-get($colores, dark-red);
+        }
+    }
+
+    a{
+        margin-right: 2em;
+        font-weight: bold;
+        color: map-get($colores, white-color);
+
+        &:hover{
+            color: map-get($colores, lightgray-color);
+        }
+    }
+}
+
+header, 
+.main__title{
+    background-color: map-get($colores, black-color);
+}
+
+
+/*MAIN*/
+main {
+    padding-top: 7em; 
+    display: block;
+}
+
+.main__first__post h2, 
+.main__galeria h2, 
+.main__posts h2{
+    color: map-get($colores, light-red);
+}
+
+.main__first__post p, 
+.main__galeria p, 
+.main__posts p{
+    color: map-get($colores, black-color);
+}
+
+/*MAIN__TITLE*/
+.main__title{
+    min-height: 25em;
+    padding: 5em;
+
+    h2{
+        min-width: 30em;
+        letter-spacing: 5px;
+        margin-bottom: 2em;
+    }
+}
+
+.button__white{
+    border: 3px solid map-get($colores, white-color);
+    background-color: transparent;
+    color: map-get($colores, white-color);
+    padding: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    &:hover{
+        background-color: map-get($colores, light-gray);
+    }
+
+    a{
+        color: map-get($colores, white-color);
+    }
+}
+
+/*MAIN__FIRST__POST*/
+.main__first__post{
+    @include flexbox(column);
+    padding: 5em;
+    line-height: 2em;
+}
+
+.main__first__post h2, 
+.main__first__post p, 
+.main__galeria article h2, 
+.main__galeria article img, 
+.main__formulario h2{
+    margin-bottom: 2em;
+}
+
+.button__learn{
+    border: 3px solid map-get($colores, light-red);
+    background-color: transparent;
+    color: map-get($colores, light-red);
+    padding: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    min-width: 15em;
+    font-weight: bolder;
+
+    a{
+        color: map-get($colores, light-red);
+    }
+
+    &:hover{
+        background-color: map-get($colores, hover-red-bottom);
+    }
+}
+
+/*MAIN__GALERIA*/
+.main__galeria{
+    @include flexbox(row);
+
+    article{
+        @include flexbox(column);
+        padding: 4em;
+        padding-top: 10em;
+        padding-bottom: 10em;
+    }
+}
+
+.main__galeria article p, 
+.main__posts article p{
+    line-height: 2em;
+}
+
+.main__galeria article:first-child{
+    background-color:  map-get($colores, background-article);
+}
+
+.main__galeria article:last-child{
+    background-color: map-get($colores, background-article-second);
+}
+
+/*MAIN_POSTS*/
+.main__posts{
+    @include flexbox(row);
+    padding: 3em;
+    max-width: 100%;
+
+    article{
+        padding: 5em;
+        max-width: 30em;
+    }
+
+    i{
+        color: map-get($colores, lightgray-color);
+    }
+}
+
+.main__posts i, 
+.main__posts h2, 
+.main__posts p{
+    margin-bottom: 1.5em;
+}
+
+
+/*MAIN__FORMULARIO*/
+.main__formulario{
+    width: 100%;
+    background-color: map-get($colores, light-red);
+    @include flexbox(column);
+    padding: 3em;
+
+    li{
+        list-style: none;
+    }
+}
+
+input, 
+textarea{
+    border: 3px solid map-get($colores, light-red-second);
+    background-color: transparent;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.main__formulario__data{
+    @include flexbox(row);
+
+    input{
+        min-width: 45em;
+        width: 100vh;
+    }
+
+    li:last-child{
+        margin-right: 1em;
+    }
+}
+
+/*FOOTER*/
+footer{
+    background-color:  map-get($colores, light-red);
+    min-height: 3em;
+    text-align: center;
+
+    a{
+        font-weight: bolder;
+        color: map-get($colores, white-color);
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
