@@ -239,12 +239,6 @@ footer a:hover {
 
 /* Media query para pantallas más pequeñas */
 @media only screen and (max-width: 600px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: stretch;
-  }
   .header__menu {
     margin-top: 1em;
   }

@@ -1,9 +1,5 @@
 /* Media query para pantallas más pequeñas */
 @media only screen and (max-width: 600px) {
-    header {
-        @include flexbox(column); 
-    }
-
     .header__menu {
         margin-top: 1em; 
 
