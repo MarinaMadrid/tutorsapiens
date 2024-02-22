@@ -167,14 +167,15 @@ main {
 .main__posts {
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
   padding: 3em;
   max-width: 100%;
 }
 .main__posts article {
   padding: 5em;
   max-width: 30em;
+  text-align: center;
 }
 .main__posts i {
   color: lightgray;
@@ -217,7 +218,7 @@ textarea {
 }
 .main__formulario__data input {
   min-width: 45em;
-  width: 100vh;
+  width: 96.5vh;
 }
 .main__formulario__data li:last-child {
   margin-right: 1em;
@@ -238,7 +239,7 @@ footer a:hover {
 }
 
 /* Media query para pantallas más pequeñas */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
   .header__menu {
     margin-top: 1em;
   }
@@ -263,6 +264,6 @@ footer a:hover {
     width: 100%;
   }
   .main__formulario__data input {
-    width: 98.7vh;
+    width: 87.7vh;
   }
 }/*# sourceMappingURL=style.css.map */
