@@ -256,8 +256,8 @@ footer a:hover {
   .main__formulario__data {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
   }
   .main__galeria article,
   .main__posts article {

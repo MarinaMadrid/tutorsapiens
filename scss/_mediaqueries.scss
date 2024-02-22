@@ -19,7 +19,7 @@
     .main__galeria,
     .main__posts,
     .main__formulario__data {
-        @include flexbox(column);
+        @include flexbox(column, center, center);
     }
 
     .main__galeria article,
